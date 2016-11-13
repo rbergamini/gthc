@@ -75,5 +75,45 @@
             </objects>
             <point key="canvasLocation" x="2117.5999999999999" y="459.22038980509751"/>
         </scene>
+        <!--Log In View Controller-->
+        <scene sceneID="7hg-i8-KoE">
+            <objects>
+                <viewController storyboardIdentifier="LogInViewController" id="KrF-wR-wsG" customClass="LogInViewController" customModule="GTHC" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ORe-Ms-Xfj"/>
+                        <viewControllerLayoutGuide type="bottom" id="AUQ-fy-HWb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DTP-wF-c2T">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sH1-tY-krV">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XdL-rB-HzQ">
+                                <rect key="frame" x="80" y="528" width="214" height="58"/>
+                                <state key="normal" title="Sign In With Google"/>
+                                <connections>
+                                    <action selector="triggerSignInWithGoogle:" destination="KrF-wR-wsG" eventType="touchUpInside" id="UKd-s5-VbC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="sH1-tY-krV" firstAttribute="centerY" secondItem="DTP-wF-c2T" secondAttribute="centerY" id="3KQ-5D-sHB"/>
+                            <constraint firstItem="XdL-rB-HzQ" firstAttribute="centerX" secondItem="DTP-wF-c2T" secondAttribute="centerX" id="WbI-qn-OKD"/>
+                            <constraint firstItem="XdL-rB-HzQ" firstAttribute="centerY" secondItem="DTP-wF-c2T" secondAttribute="centerY" constant="-60" id="XA6-lI-Z7t"/>
+                            <constraint firstItem="sH1-tY-krV" firstAttribute="centerX" secondItem="DTP-wF-c2T" secondAttribute="centerX" id="f80-v8-RaN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundImage" destination="sH1-tY-krV" id="61Z-E6-tyr"/>
+                        <outlet property="logInButton" destination="XdL-rB-HzQ" id="Wj5-Rg-woC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B5m-h9-yiM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2674.4000000000001" y="44.527736131934034"/>
+        </scene>
     </scenes>
 </document>

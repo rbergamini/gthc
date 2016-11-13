@@ -26,7 +26,7 @@ class ViewController: UIViewController, UIPageViewControllerDataSource
         self.pageViewController = self.storyboard?.instantiateViewController(withIdentifier: "PageViewController") as? UIPageViewController
         self.pageViewController!.dataSource = self
         
-        let firstPage: PageContentViewController = pageContentViewController(atIndex:0)!
+        let firstPage: UIViewController = pageContentViewController(atIndex:0)!
         let viewControllers: [UIViewController] = [firstPage]
         self.pageViewController!.setViewControllers(viewControllers, direction: .forward, animated: false, completion: nil)
     
@@ -37,9 +37,26 @@ class ViewController: UIViewController, UIPageViewControllerDataSource
         self.pageViewController!.didMove(toParentViewController: self)
     }
     
-    func pageContentViewController(atIndex index: Int) -> PageContentViewController?
+    func pageContentViewController(atIndex index: Int) -> UIViewController?
     {
         
+        if index == messageContents.count
+        {
+            print("Loading log in view controller")
+            if let logInViewController: LogInViewController = self.storyboard?.instantiateViewController(withIdentifier: "LogInViewController")
+            as? LogInViewController
+            {
+                print("Found the LogInViewController file")
+                return logInViewController
+            }
+            else
+            {
+                print("Couldn't find the file")
+                return nil
+            }
+        }
+        else
+        {
         if let pageContentViewController: PageContentViewController = self.storyboard?.instantiateViewController(withIdentifier: "PageContentController") as? PageContentViewController
         {
             pageContentViewController.messageContent = messageContents[index]
@@ -51,8 +68,10 @@ class ViewController: UIViewController, UIPageViewControllerDataSource
             
             return pageContentViewController
         }
+        }
         
         return nil;
+            
     }
 
     override func didReceiveMemoryWarning() {
@@ -64,9 +83,16 @@ class ViewController: UIViewController, UIPageViewControllerDataSource
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController?
     {
-        let currentPageContentViewController: PageContentViewController = viewController as!PageContentViewController
         
-        let currentIndex = currentPageContentViewController.pageIndex;
+        var currentIndex: Int
+        if let currentPageContentViewController: PageContentViewController = viewController as?PageContentViewController
+        {
+            currentIndex = currentPageContentViewController.pageIndex;
+        }
+        else
+        {
+            currentIndex = messageContents.count
+        }
     
         if currentIndex >= presentationCount(for:pageViewController) - 1
         {
@@ -80,9 +106,16 @@ class ViewController: UIViewController, UIPageViewControllerDataSource
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController?
     {
-        let currentPageContentViewController: PageContentViewController = viewController as!PageContentViewController
         
-        let currentIndex = currentPageContentViewController.pageIndex;
+        var currentIndex: Int
+        if let currentPageContentViewController: PageContentViewController = viewController as?PageContentViewController
+        {
+            currentIndex = currentPageContentViewController.pageIndex;
+        }
+        else
+        {
+            currentIndex = messageContents.count
+        }
         
         if currentIndex == 0
         {
@@ -96,7 +129,7 @@ class ViewController: UIViewController, UIPageViewControllerDataSource
     
     func presentationCount(for pageViewController: UIPageViewController) -> Int
     {
-        return messageContents.count
+        return messageContents.count + 1
     }
     
     func presentationIndex(for pageViewController: UIPageViewController) -> Int
