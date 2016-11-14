@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		775293ED1DD7F3EC0053979A /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775293EC1DD7F3EC0053979A /* LogInViewController.swift */; };
 		7799EF661DD7A9C200362A73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7799EF651DD7A9C200362A73 /* AppDelegate.swift */; };
 		7799EF681DD7A9C200362A73 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7799EF671DD7A9C200362A73 /* ViewController.swift */; };
 		7799EF6B1DD7A9C200362A73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7799EF691DD7A9C200362A73 /* Main.storyboard */; };
@@ -14,6 +15,7 @@
 		7799EF701DD7A9C200362A73 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7799EF6E1DD7A9C200362A73 /* LaunchScreen.storyboard */; };
 		7799EF7B1DD7A9C200362A73 /* GTHCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7799EF7A1DD7A9C200362A73 /* GTHCTests.swift */; };
 		7799EF861DD7A9C200362A73 /* GTHCUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7799EF851DD7A9C200362A73 /* GTHCUITests.swift */; };
+		7799EF941DD7B14000362A73 /* PageConentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7799EF931DD7B14000362A73 /* PageConentViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		775293EC1DD7F3EC0053979A /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		7799EF621DD7A9C100362A73 /* GTHC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GTHC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7799EF651DD7A9C200362A73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7799EF671DD7A9C200362A73 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +50,7 @@
 		7799EF811DD7A9C200362A73 /* GTHCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GTHCUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7799EF851DD7A9C200362A73 /* GTHCUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTHCUITests.swift; sourceTree = "<group>"; };
 		7799EF871DD7A9C200362A73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7799EF931DD7B14000362A73 /* PageConentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageConentViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 				7799EF6C1DD7A9C200362A73 /* Assets.xcassets */,
 				7799EF6E1DD7A9C200362A73 /* LaunchScreen.storyboard */,
 				7799EF711DD7A9C200362A73 /* Info.plist */,
+				7799EF931DD7B14000362A73 /* PageConentViewController.swift */,
+				775293EC1DD7F3EC0053979A /* LogInViewController.swift */,
 			);
 			path = GTHC;
 			sourceTree = "<group>";
@@ -262,7 +268,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				775293ED1DD7F3EC0053979A /* LogInViewController.swift in Sources */,
 				7799EF681DD7A9C200362A73 /* ViewController.swift in Sources */,
+				7799EF941DD7B14000362A73 /* PageConentViewController.swift in Sources */,
 				7799EF661DD7A9C200362A73 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -514,6 +522,7 @@
 				7799EF8C1DD7A9C200362A73 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7799EF8D1DD7A9C200362A73 /* Build configuration list for PBXNativeTarget "GTHCTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +531,7 @@
 				7799EF8F1DD7A9C200362A73 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7799EF901DD7A9C200362A73 /* Build configuration list for PBXNativeTarget "GTHCUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +540,7 @@
 				7799EF921DD7A9C200362A73 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
